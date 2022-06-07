@@ -1,0 +1,70 @@
+body{
+    display: grid;
+    place-content: center;
+}
+.container{
+    background-color: honeydew;
+    width: 900px;
+    height: 900px;
+    padding: 10px;
+}
+.head{
+    width: 900px;
+    height: 200px;
+    overflow: hidden;
+    background-color: darkslategrey;
+    text-align: center;
+}
+.pic{
+    border: 3px dashed yellow;
+    margin-top: 15px;
+    border-radius: 100px;
+    overflow: hidden;
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+}
+.ranges{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.inp{
+    width:100px;
+}
+.back{
+    width: 900px;
+    background-color: white;
+    padding: 11px 15px;
+    overflow: hidden;
+    position: relative;
+    margin: -10px 0px;
+    top: -24px;
+}
+.name{
+    letter-spacing:2px;
+    background-color: yellow;
+    margin: 0px 294px;
+    padding: 11px 15px;
+    border-radius: 5px;
+    position: relative;
+    top:-47px;    
+}
+.address{
+    letter-spacing:3px;
+    text-align: center;
+    margin-top: 3px;
+    border-bottom: 3px solid grey;
+}
+.profile-info1{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    overflow: auto;
+    padding-right: 10px;
+}
+.lio{
+    padding-right: 20px;
+}
+.section1{
+    width: 50%;
+}
