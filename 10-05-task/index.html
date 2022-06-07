@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <form class="forms">
+        <label class="fonts">Name<span>*</span></label>
+        <div class="name-sty">
+            <input type="text" placeholder="Enter the first Name">
+            <input type="text" placeholder="Enter the Last Name">
+            <label>First</label>
+            <label>Last</label>
+        </div>
+        <label class="fonts">Email<span>*</span></label>
+        <div class="email">
+            <input id="mail" type="email" placeholder="Enter your Email" required>
+        </div>
+        <label class="fonts">Your Experience<span>*</span></label>
+        <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+        </div>  
+        <p class="fonts2">Overall How would you rate your experience with us ?</p>
+        <label class="fonts">How satisfied are you with<span>*</span></label>
+        <div class="input-table1">
+            <label ></label>
+            <label >Very Unsatisfied</label>
+            <label >Unsatisfied</label>
+            <label >Neutral</label>
+            <label >Satisfied</label>
+            <label >Very Satisfied</label>
+            
+            <label >Purchase</label>
+            <input type="radio" name="rating1" class="sty1">
+            <input type="radio" name="rating1" class="sty1">
+            <input type="radio" name="rating1" class="sty1">
+            <input type="radio" name="rating1" class="sty1">
+            <input type="radio" name="rating1" class="sty1">
+    
+            <label >Service</label>
+            <input type="radio" name="rating2" class="sty1">
+            <input type="radio" name="rating2" class="sty1">
+            <input type="radio" name="rating2" class="sty1">
+            <input type="radio" name="rating2" class="sty1">
+            <input type="radio" name="rating2" class="sty1">
+            <label >Company Overall</label>
+            <input type="radio" name="rating3" class="sty1">
+            <input type="radio" name="rating3" class="sty1">
+            <input type="radio" name="rating3" class="sty1">
+            <input type="radio" name="rating3" class="sty1">
+            <input type="radio" name="rating3" class="sty1">
+        </div>
+
+        <label class="fonts">How likely are you to<span>*</span></label>
+        <div class="input-table1">
+            <label ></label>
+            <label >Very Unlikely</label>
+            <label >Unlikely</label>
+            <label >Neutral</label>
+            <label >Likely</label>
+            <label >Very Likely</label>
+            <label >Buy from us again</label>
+            <input type="radio" name="rating1" class="sty1">
+            <input type="radio" name="rating1" class="sty1">
+            <input type="radio" name="rating1" class="sty1">
+            <input type="radio" name="rating1" class="sty1">
+            <input type="radio" name="rating1" class="sty1">
+            <label >Recommend our product to others</label>
+            <input type="radio" name="rating2" class="sty1">
+            <input type="radio" name="rating2" class="sty1">
+            <input type="radio" name="rating2" class="sty1">
+            <input type="radio" name="rating2" class="sty1">
+            <input type="radio" name="rating2" class="sty1">
+            <label >Recommend our Company to others</label>
+            <input type="radio" name="rating3" class="sty1">
+            <input type="radio" name="rating3" class="sty1">
+            <input type="radio" name="rating3" class="sty1">
+            <input type="radio" name="rating3" class="sty1">
+            <input type="radio" name="rating3" class="sty1">
+        </div>
+        <label class="fonts" for="Comment">Additional Comments or Suggestions </label>
+        <textarea name="Comment" cols="100" rows="7"></textarea>
+        <button id="sub">Submit</button>
+    </form>
+</body>
+</html>

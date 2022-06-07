@@ -1,0 +1,43 @@
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;    
+}
+.forms{
+    width: 800px;
+    margin: auto;
+    display: block;
+}
+.fonts{
+    font-weight: bold;
+    display: block;
+    margin-right: 500px;
+    margin-top: 15px;
+}
+span{
+    color:rgb(243, 103, 126)
+}
+.name-sty{
+    margin-right: 350px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:5px
+}
+.input-table1{
+    display: block;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+}
+#mail{
+width: 55%;
+}
+.sty1{
+  margin-left: 50px;  
+}
+.sty2{
+    background-color: darkgray;
+}
+#sub{
+    margin:  20px 10px;
+}
