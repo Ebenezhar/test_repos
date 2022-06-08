@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table with Form</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Padauk&family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="container">
+        <h2 class="head">Person Details</h2>
+        <div class="inp">
+            <label for="firstName">Enter the Name</label>
+            <input type="text" id="firstName">
+            <label for="gen">Enter the Gender</label>
+            <input type="text" id="gen">
+            <label for="food">Enter the Choice of Food</label>
+            <input type="text" id="food">
+            <label for="state">Enter the State</label>
+            <input type="text" id="state">
+            <label for="country">Enter the Country</label>
+            <input type="text" id="country">
+        </div>
+        <button id="search" type="button" onclick="getData()">Add</button>
+        <table id="table">
+            <tr>
+                <th>First Name</th>
+                <th>Gender</th>
+                <th>Choice of food</th>
+                <th>State</th>
+                <th>Country</th>
+            </tr>
+            <!-- <tr id="list">
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+                <td>Maria Anders</td>
+                <td>Maria Anders</td>
+                <td>Germany</td>
+            </tr> -->
+        </table>
+    </section>
+</body>
+</html>
