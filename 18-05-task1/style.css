@@ -1,0 +1,48 @@
+body{
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: url("https://miro.medium.com/max/1400/1*bGh8MbcLROxiwybIofzoyA.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(5px);
+}
+.container{
+    width: 600px; 
+    border: 5px solid black;
+    background-color: rgba(255, 255, 255, 0.579);
+    border-radius: 8px;
+}
+#table{
+    width: 100%;
+}
+.head{
+    text-align: center;
+    letter-spacing: 5px;
+    text-decoration: underline;
+}
+#search{
+    font-size: 19px;
+    margin: 20px 253px;
+    padding: 8px 34px;
+}
+.inp{
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    width: 500px;
+    padding: 35px;
+}
+td, th {
+    background-color: rgb(210 80 206 / 55%);
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+  
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
