@@ -12,7 +12,7 @@ function createBooks(element){
     <div id="charac-${element.isbn}" class="characters com"></div>`
     document.querySelector("#contain1").append(contain);
     var identity = element.isbn;
-    console.log("iden",identity);
+    //console.log("iden",identity);
     let characterUrls = element.characters;
     createCharacters(identity,characterUrls);   
 }
@@ -21,15 +21,10 @@ function createSingleCharacter (identity,character) {
     contain2.setAttribute("class","charer")
     contain2.innerText = character.name;
     console.log(character.name);
-    // let count = 0;
-    // if(character.name>1){        
-    //     count = count + 1;
-    //     return count;
-    // }
     document.querySelector(`#charac-${identity}`).append(contain2);
     if((character.name).length>2){ 
         console.log("len:",(character.name).length)
-        console.log(identity);
+        console.log("isbn: ",identity);
         return true;
     }
     return false;
@@ -42,12 +37,13 @@ async function fetchCharacter (identity,characterUrl){
 
 function createCharacters (identity,characterUrls){  
     var count = 0;  
-    for (let i = 0 ; i < 20; i++ ){
+    for (let i = 0 ; i < 10; i++ ){
         let characterUrl  = characterUrls[i];
         let isValidchar = fetchCharacter(identity,characterUrl);  
-        if(isValidchar){
-            count++;
+        console.log("cha",isValidchar);
+        if(isValidchar==1){
             debugger;
+            count++;
             console.log("Count: ",count)
         }
         if(count == 5){
@@ -75,8 +71,8 @@ async function createContainer () {
     }
 
 }
-window.addEventListener('DOMContentLoaded', (event) => {
-    createContainer();
-});
+// window.addEventListener('DOMContentLoaded', (event) => {
+//     createContainer();
+// });
 
 
