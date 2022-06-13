@@ -220,30 +220,131 @@
 // console.log(array.sort().join(" "));
 
 //Sort matrix Array.
-let a  = ["3 3","23 15 16","357 65 10"];
+// let a  = ["3 3","23 15 16","357 65 10"];
 
-let inputs = a[0].split(" ").map(Number);
+// let inputs = a[0].split(" ").map(Number);
 
-let array  = [];
-let array1 = [];
-let res = [];
+// let array  = [];
+// let array1 = [];
+// let res = [];
 
-for(let i = 1; i <= inputs.length; i++){
-    let b = a[i];
-    array = b.split(" ").map(Number);
-    array1.push(array);
+// for(let i = 1; i <= inputs.length; i++){
+//     let b = a[i];
+//     array = b.split(" ").map(Number);
+//     array1.push(array);
+// }
+// let res1 = array1[0].sort();
+// pushData(res,res1);
+// let res2 = array1[1].sort(function(a, b){return b - a});
+// console.log(res2);
+// pushData(res,res2);
+// function pushData(res,inp){
+//     for (let i = 0; i < inp.length; i++){
+//         res.push(inp[i]);
+//     }
+//     return res;
+// }
+// console.log(res.join(" "));
+
+
+//To find ratio of positive, negative and zero count
+// let array = [7,5,3,0,0,-5,-3,1,0,-1];
+
+// let pos_count = 0;
+// let neg_count = 0;
+// let zero_count = 0;
+
+// for(let values of array){
+//     let res = Math.sign(values);
+//     if(res == -1) neg_count += 1;
+//     else if(res == 1) pos_count +=1;
+//     else zero_count +=1;     
+// }
+// console.log((pos_count/array.length).toFixed(6));
+// console.log((neg_count/array.length).toFixed(6));
+// console.log((zero_count/array.length).toFixed(6));
+
+// Given a string S, print it after changing the middle element to * (if the length of the string is even, change the 2 middle elements to *).
+
+// let  a = "hello";
+
+// let array = a.split("");
+
+// if(array.length%2 == 1){
+//     let index = (array.length/2).toFixed();
+//     array[index-1] = "*";
+// }
+// else if(array.length%2 == 0){
+//     //let index1 = (array.length/2)
+//     array[array.length/2] = "*";
+    
+//     let index1 = (array.length/2)-1;
+//     array[index1] = "*";
+// }
+// console.log(array);
+
+
+//sort the even index element
+
+// let a = [5,"3 9 1 44 6"];
+
+// let array = a[1].split(" ").map(Number);
+// let sortArray = [];
+
+// for(let i = 0; i < array.length; i=i+2){
+//     sortArray.push(array[i]);
+// }
+// sortArray.sort();
+
+// for(let i = 0; i < array.length; i=i+2){
+//     for(let values of sortArray){
+//         array[i] = values;
+//         sortArray.shift();
+//         break;
+//     }
+// }
+// console.log(array.join(" "));
+
+
+//check whether the sum of the first three elements = sum the last the three elements.
+
+// let a = [7,"1 2 3 4 6 1 0"];
+
+// let array = a[1].split(" ").map(Number);
+
+// let firstThreeElement = getSum(array, 0, 3);
+// let lastThreeElement = getSum(array,array.length-3,array.length);
+
+// function getSum(array,start,stop){
+//     let total = 0;
+//     for(let i = start; i < stop; i++){
+//         total += array[i];
+//     }
+//     return total;
+// }
+// if(firstThreeElement == lastThreeElement)  console.log("1");
+// else console.log("0");
+
+
+// Given a number N and an array of N integers, find the sum of all the negative numbers in the array
+
+let a = [5,"3 1 5 2 1"];
+
+let array = a[1].split(" ").map(Number);
+let resArray = [];
+let total = 0;
+
+for(let values of array){
+    if(values < 0) resArray.push(values);
 }
-let res1 = array1[0].sort();
-pushData(res,res1);
-let res2 = array1[1].sort(function(a, b){return b - a});
-console.log(res2);
-pushData(res,res2);
-function pushData(res,inp){
-    for (let i = 0; i < inp.length; i++){
-        res.push(inp[i]);
-    }
-    return res;
+
+for(let values of resArray){
+    total += values;
 }
-console.log(res.join(" "));
+
+if(total) console.log(total);
+else console.log("0");
+
+
 
 
