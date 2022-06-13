@@ -328,22 +328,22 @@
 
 // Given a number N and an array of N integers, find the sum of all the negative numbers in the array
 
-let a = [5,"3 1 5 2 1"];
+// let a = [5,"3 1 5 2 1"];
 
-let array = a[1].split(" ").map(Number);
-let resArray = [];
-let total = 0;
+// let array = a[1].split(" ").map(Number);
+// let resArray = [];
+// let total = 0;
 
-for(let values of array){
-    if(values < 0) resArray.push(values);
-}
+// for(let values of array){
+//     if(values < 0) resArray.push(values);
+// }
 
-for(let values of resArray){
-    total += values;
-}
+// for(let values of resArray){
+//     total += values;
+// }
 
-if(total) console.log(total);
-else console.log("0");
+// if(total) console.log(total);
+// else console.log("0");
 
 
 
