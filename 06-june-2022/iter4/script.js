@@ -16,33 +16,46 @@ function createBooks(element){
     let characterUrls = element.characters;
     createCharacters(identity,characterUrls);   
 }
-function createSingleCharacter (identity,character) {
-    let contain2 = document.createElement("div");
-    contain2.setAttribute("class","charer")
-    contain2.innerText = character.name;
-    console.log(character.name);
-    document.querySelector(`#charac-${identity}`).append(contain2);
-    if((character.name).length>2){ 
-        console.log("len:",(character.name).length)
-        console.log("isbn: ",identity);
+async function fetchCharacter (identity,characterUrl){
+    
+    let response = await fetch(characterUrl);
+    let character = await response.json(); 
+    
+    let char_len = character.gender;
+    console.log("char_len",char_len.length);
+    if(char_len.length>2){ 
+        let contain2 = document.createElement("div");
+            contain2.setAttribute("class","charer")
+            contain2.innerText = character.gender;
+            console.log("Gender:",character.gender);
+            document.querySelector(`#charac-${identity}`).append(contain2);
         return true;
     }
     return false;
-}
-async function fetchCharacter (identity,characterUrl){
-    let response = await fetch(characterUrl);
-    let character = await response.json(); 
-    return createSingleCharacter(identity,character);
+    // let isCharacterpresent = createSingleCharacter(identity,character);
+    // console.log(isCharacterpresent);
+    // return isCharacterpresent;
 }
 
-function createCharacters (identity,characterUrls){  
-    var count = 0;  
-    for (let i = 0 ; i < 10; i++ ){
+function createCharacters (identity,characterUrls){ 
+    console.log("CreateChar"); 
+    console.log("Values");
+    var count = 0; 
+    // let characterUrls_length = characterUrls.length;
+    // let len = 0;
+    // if(characterUrls_length > 5){
+    //     len = 5;
+    // }  
+    // else{
+    //     len = characterUrls_length;
+    // }
+    console.log("URL",characterUrls.length);
+    for (let i = 0 ; i < 20; i++ ){
+        console.log("for Loop",i);
         let characterUrl  = characterUrls[i];
         let isValidchar = fetchCharacter(identity,characterUrl);  
         console.log("cha",isValidchar);
-        if(isValidchar==1){
-            debugger;
+        if(isValidchar){
             count++;
             console.log("Count: ",count)
         }

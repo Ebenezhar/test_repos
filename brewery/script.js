@@ -33,8 +33,7 @@ async function createContainer () {
         });
     }
 }
-window.addEventListener('DOMContentLoaded', (event) => {
     createContainer();
-});
+
 
 

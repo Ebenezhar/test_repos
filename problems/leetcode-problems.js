@@ -129,20 +129,20 @@
 
 //Scalene triangle perimeter
 
-var largestPerimeter = function(nums) {
-   nums.sort();
-  for(let i = (nums.length-3) ; i>=0 ; --i){
-    if(nums[i]+nums[i+1]>nums[i+2]){
-      let res = nums[i]+nums[i+1]+nums[i+2];
-      return res;
-    }
-    else{
-      return 0;
-    }
-  }
-};
-let nums = [1,2,3,7,8,6,5];
-console.log(largestPerimeter(nums));
+// var largestPerimeter = function(nums) {
+//    nums.sort();
+//   for(let i = (nums.length-3) ; i>=0 ; --i){
+//     if(nums[i]+nums[i+1]>nums[i+2]){
+//       let res = nums[i]+nums[i+1]+nums[i+2];
+//       return res;
+//     }
+//     else{
+//       return 0;
+//     }
+//   }
+// };
+// let nums = [1,2,3,7,8,6,5];
+// console.log(largestPerimeter(nums));
 
 
 // class Solution {
@@ -154,3 +154,34 @@ console.log(largestPerimeter(nums));
 //       return 0;
 //   }
 // }
+
+
+let input = prompt('Enter the Numbers: ');
+
+let array1 = ["I","II","III","IV","V","VI","VII","VIII","IX","X"];
+let array2 = ["X","XX","XXX","XL","L","LX","LXX","LXXX","XC","C"];
+
+
+let res = [];
+
+function get_Digit(values,array){
+  let index = values -1
+  return array[index];
+}
+
+if(input <=10){
+  console.log(get_Digit(input,array1));
+}
+else{
+  let input1 =  Math.floor(input/10);
+  
+  let input2 = (input%10);
+  
+  res.push(get_Digit(input1,array2));
+  
+  if(input2>0){
+    res.push(get_Digit(input2,array1));
+  }
+  console.log(res.join(""));
+
+}
